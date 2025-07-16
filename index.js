@@ -23,3 +23,14 @@ let currentRecordId= null;
     <td><button class="edit-btn" data-id="${record.id}">Edit</button>
     <button class="delete-btn" data-id="${record.id}">Delete</button></td>
     `;
+    // Add functionality to the Edit button
+    const editBtn = tr.querySelector('.edit-btn');
+    editBtn.addEventListener('click',()=> {
+        // prefill the form with this record current info
+        form.date.value= record.date
+        form.time.value= record.time
+        form.level.value= record.level
+        // save the record id so we can patch it later
+        currentRecordId = record.id
+        submitBtn.textContent = 'Update';
+    });
