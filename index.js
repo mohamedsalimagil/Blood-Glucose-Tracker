@@ -13,4 +13,13 @@ let currentRecordId= null;
              });
 
     }
-    
+    //render a single record as a table row
+   function renderRecord(record) {
+    const tr = document.createElement('tr'); //create a row element
+    tr.innerHTML =`
+    <td>${record.date}</td>
+    <td>${record.time}</td>
+    <td>${record.level}</td>
+    <td><button class="edit-btn" data-id="${record.id}">Edit</button>
+    <button class="delete-btn" data-id="${record.id}">Delete</button></td>
+    `;
