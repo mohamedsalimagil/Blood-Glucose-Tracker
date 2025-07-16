@@ -28,3 +28,14 @@ form input[type="submit"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Table layout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: lightcyan;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
