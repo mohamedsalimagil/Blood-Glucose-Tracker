@@ -56,4 +56,14 @@ let currentRecordId= null;
         time: form.time.value,
         level:parseFloat(form.level.value)
     };
-    
+    const url = currentRecordId
+    ? `http://localhost:3000/records/${currentRecordId}`
+    : 'http://localhost:3000/records';
+    const method = currentRecordId ? 'PATCH' : 'POST';
+    fetch(url,{
+        method,
+        headers: {
+            'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(recordData)
+    })
