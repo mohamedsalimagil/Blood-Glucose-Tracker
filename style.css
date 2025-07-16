@@ -64,3 +64,15 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
+button:hover {
+  background-color: #1e7e34;
+}
+
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
