@@ -39,3 +39,14 @@ table {
   background-color: lightcyan;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+th, td {
+  padding: 12px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Table header row */
+thead {
+  background-color: #007BFF;
+  color: white;
+}
