@@ -67,3 +67,15 @@ let currentRecordId= null;
         },
         body: JSON.stringify(recordData)
     })
+    .then(response=> response.json())
+    .then(() =>{
+        currentRecordId = null;
+        form.reset();
+        submitBtn.textContent = 'Add';
+        fetchRecords();
+    });
+     
+   });
+   // call this once the page loads
+   fetchRecords()
+});
