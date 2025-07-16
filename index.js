@@ -78,4 +78,5 @@ let currentRecordId= null;
    });
    // call this once the page loads
    fetchRecords()
+   
 });
