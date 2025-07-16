@@ -21,3 +21,10 @@ form input[type="submit"] {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+/* Make submit button stand out */
+form input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
