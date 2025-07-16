@@ -46,4 +46,14 @@ let currentRecordId= null;
     // add a raw to the table
     tableBody.appendChild(tr);
         }
+        //handle form submission to update the dog
+   form.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+    
+    const recordData = {
         
+        date: form.date.value,
+        time: form.time.value,
+        level:parseFloat(form.level.value)
+    };
+    
