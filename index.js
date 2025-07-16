@@ -34,3 +34,16 @@ let currentRecordId= null;
         currentRecordId = record.id
         submitBtn.textContent = 'Update';
     });
+    const deleteBtn = tr.querySelector('.delete-btn');
+    deleteBtn.addEventListener('click', () => {
+        const confirmDelete= confirm("Are you sure you want to delete this record?");
+        if (! confirmDelete)return;
+        fetch(`http://localhost:3000/records/${record.id}`,{
+            method: 'DELETE'
+        })
+        .then(fetchRecords);                         
+            })
+    // add a raw to the table
+    tableBody.appendChild(tr);
+        }
+        
