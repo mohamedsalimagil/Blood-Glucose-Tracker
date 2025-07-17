@@ -76,6 +76,19 @@ let currentRecordId= null;
     });
      
    });
+   document.getElementById("quote-btn").addEventListener("click", () => {
+  fetch("https://johndturn-quotableapiproxy.web.val.run/")
+    .then(response => response.json())
+    .then(data => {
+      const quote = data[0].content;
+      const author = data[0].author;
+      document.getElementById("quote-text").textContent = `"${quote}" — ${author}`;
+    })
+    .catch(error => {
+      console.error("Error fetching quote:", error);
+      document.getElementById("quote-text").textContent = "Could not load quote.";
+    });
+});
    // call this once the page loads
    fetchRecords()
    
