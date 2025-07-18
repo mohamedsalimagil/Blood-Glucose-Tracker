@@ -29,11 +29,9 @@
     "totalist": "^3.0.1",
     "type-fest": "^4.41.0"
   },
-  "devDependencies": {},
   "scripts": {
-  "start": "node server.js"
-},
-
+    "start": "node server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
