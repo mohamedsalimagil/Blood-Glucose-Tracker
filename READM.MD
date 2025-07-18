@@ -16,7 +16,7 @@ A simple web-based application that allows users to record, view, edit, and dele
 
 ## Tech Stack
 
-* **Frontend:** HTML, CSS, Vanilla JavaScript
+* **Frontend:** HTML, CSS,JavaScript
 * **Backend:** JSON Server (hosted via Render)
 
 ---
@@ -33,9 +33,6 @@ Blood-Glucose-Tracker/
 ├── package.json
 └── README.md
 ```
-
----
-
 ## Setup Instructions
 
 ### Local Development
@@ -88,15 +85,6 @@ The `script.js` file handles:
   > *Built with love by* **[Mohamed Salim Agil](https://github.com/mohamedsalimagil)**
 
 ---
-
-## Sample Entry
-
-| Date       | Time  | Level (mmol/L) | Actions       |
-| ---------- | ----- | -------------- | ------------- |
-| 2025-07-15 | 08:30 | 5.6            | Edit / Delete |
-
----
-
 ## Notes
 
 * Make sure your Render deployment uses `npm start` and `server.js` is correctly configured.
