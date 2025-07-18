@@ -36,7 +36,7 @@ let currentRecordId= null;// variable to keep track of the record being edited
     deleteBtn.addEventListener('click', () => {// Add a click event listener to the delete button
         const confirmDelete= confirm("Are you sure you want to delete this record?");//confirm before deleting
         if (! confirmDelete)return;//if not confirmed, exit the function
-        fetch(`http://localhost:3000/records/${record.id}`,{//send a DELETE request to the server
+        fetch(`https://blood-glucose-tracker-9or0.onrender.com/${record.id}`,{//send a DELETE request to the server
             method: 'DELETE'
         })
         .then(fetchRecords);   //refresh the records after deletion                      
@@ -55,8 +55,8 @@ let currentRecordId= null;// variable to keep track of the record being edited
         level:parseFloat(form.level.value)// get the level value from the form and convert it to a float
     };
     const url = currentRecordId//determine the URL based on whether we are editing or adding a new record
-    ? `http://localhost:3000/records/${currentRecordId}`// if we are editing, use the specific record URL
-    : 'http://localhost:3000/records';// if we are adding, use the base URL for records
+    ? `https://blood-glucose-tracker-9or0.onrender.com/${currentRecordId}`// if we are editing, use the specific record URL
+    : 'https://blood-glucose-tracker-9or0.onrender.com';// if we are adding, use the base URL for records
     const method = currentRecordId ? 'PATCH' : 'POST';//use PATCH for editing and POST for adding a new record
     fetch(url,{//send the record data to the server
         method,
