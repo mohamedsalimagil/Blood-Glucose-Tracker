@@ -77,17 +77,19 @@ let currentRecordId= null;
      
    });
    document.getElementById("quote-btn").addEventListener("click", () => {
-  fetch("https://johndturn-quotableapiproxy.web.val.run/")
-    .then(response => response.json())
-    .then(data => {
-      const quote = data[0].content;
-      const author = data[0].author;
-      document.getElementById("quote-text").textContent = `"${quote}" — ${author}`;
-    })
-    .catch(error => {
-      console.error("Error fetching quote:", error);
-      document.getElementById("quote-text").textContent = "Could not load quote.";
-    });
+  const proxy = "https://api.allorigins.win/get?url=";
+const url = encodeURIComponent("https://zenquotes.io/api/random");
+
+fetch(`${proxy}${url}`)
+  .then(res => res.json())
+  .then(data => {
+    const parsed = JSON.parse(data.contents);
+    const quote = parsed[0].q;
+    const author = parsed[0].a;
+    document.getElementById("quote-text").textContent = `"${quote}" — ${author}`;
+
+  });
+
 });
    // call this once the page loads
    fetchRecords()
