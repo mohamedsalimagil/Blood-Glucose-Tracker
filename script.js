@@ -4,7 +4,7 @@ const form = document.getElementById('record-form');//get the form element by it
 const tableBody = document.getElementById('record-table-body');// get the table body where records will be displayed
 let currentRecordId= null;// variable to keep track of the record being edited
     function fetchRecords(){//function to fetch records from the server
-        fetch("http://localhost:3000/records")//Get request to the Api
+        fetch("https://blood-glucose-tracker-9or0.onrender.com/")//Get request to the Api
         .then(res => res.json()) //convert the response to json
         .then(records => {// once we have the records, we clear the table and render each record
             tableBody.innerHTML = ''; // CLEAR any exxisting rows
