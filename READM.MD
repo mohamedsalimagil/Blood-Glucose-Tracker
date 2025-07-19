@@ -1,109 +1,74 @@
 # Blood Glucose Tracker
 
-A simple web-based application that allows users to record, view, edit, and delete their blood glucose readings. Built using HTML, CSS, and JavaScript, and powered by a `json-server` backend.
+## Description
 
----
+This is a simple web-based blood glucose tracking application designed to help users log and view their blood sugar levels. It provides a clean interface for adding new entries and displaying a history of records. The project is built to practice DOM manipulation and working with external APIs using a deployed `json-server`.
 
-## Features
+## Project Overview
 
-* Add blood glucose readings with date, time, and level.
-* Edit existing readings easily.
-* Delete unwanted records with confirmation.
-* View all records in a clean, styled table.
-* Fully responsive and styled UI.
+The application interacts with a live backend (hosted on Render) and is fully functional online. Users can access the application directly to add, view, and delete blood glucose records.
 
----
+### Features
 
-## Tech Stack
+* View a list of blood glucose records
+* Add new records (date, time, and level)
+* Delete existing records
 
-* **Frontend:** HTML, CSS,JavaScript
-* **Backend:** JSON Server (hosted via Render)
+## Live Demo
 
----
+You can view and use the live application here:
+ [Blood Glucose Tracker (GitHub Pages)](https://mohamedsalimagil.github.io/Blood-Glucose-Tracker/)
 
-## Project Structure
+> The app communicates with a deployed JSON server hosted on Render, so it works fully online — no installation required.
 
+## Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+* JSON Server (deployed on Render)
+
+## Installations (For Local Use Only)
+
+To run this project locally, follow the steps below:
+
+1. **Install [Node.js](https://nodejs.org/)** if not already installed
+2. **Install `json-server` globally**
+
+```bash
+npm install -g json-server
 ```
-Blood-Glucose-Tracker/
-├── index.html
-├── style.css
-├── script.js
-├── db.json (for local testing)
-├── server.js (for deployment)
-├── package.json
-└── README.md
+
+## How to Run the Project Locally
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/mohamedsalimagil/Blood-Glucose-Tracker.git
 ```
-## Setup Instructions
 
-### Local Development
+2. **Navigate into the project folder**
 
-1. **Clone the repository:**
+```bash
+cd Blood-Glucose-Tracker
+```
 
-   ```bash
-   git clone https://github.com/mohamedsalimagil/Blood-Glucose-Tracker.git
-   cd Blood-Glucose-Tracker
-   ```
+3. **Start the JSON server**
 
-2. **Install dependencies:**
+```bash
+json-server --watch db.json
+```
 
-   ```bash
-   npm install
-   ```
+4. **Open `index.html`** in your browser
+   (You can also use the Live Server extension in VS Code)
 
-3. **Start JSON Server:**
+> **Note:** For a fully working version without setup, use the [hosted link](https://mohamedsalimagil.github.io/Blood-Glucose-Tracker/).
 
-   ```bash
-   json-server --watch db.json --port 3000
-   ```
+## Author
 
-4. **Open `index.html` in your browser.**
-
-### Deployment (Render)
-
-* The backend is deployed using [Render](https://render.com).
-* API URL used in frontend: `https://blood-glucose-tracker-9or0.onrender.com`
-
----
-
-## Core Logic
-
-The `script.js` file handles:
-
-* **Fetching records** from the backend and rendering them as table rows.
-* **Submitting the form** to either add a new reading or update an existing one.
-* **Editing** a record: pre-fills the form and sets a flag for PATCH request.
-* **Deleting** a record: asks for confirmation, then sends DELETE request.
-
----
-
-## UI Overview
-
-* Clean input form with fields for date, time, and glucose level.
-* Table with Edit and Delete buttons.
-* Footer with GitHub link:
-
-  > *Built with love by* **[Mohamed Salim Agil](https://github.com/mohamedsalimagil)**
-
----
-## Notes
-
-* Make sure your Render deployment uses `npm start` and `server.js` is correctly configured.
-* If local `json-server` isn't recognized, try installing it globally:
-
-  ```bash
-  npm install -g json-server
-  ```
-
----
+Mohamed Salim Agil
 
 ## License
 
 MIT
 
----
-
-
-
-
-
-**Enjoy tracking your health!**
